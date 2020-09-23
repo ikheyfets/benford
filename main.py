@@ -7,6 +7,8 @@ class Benford:
         self.data = []
         self.digits = {}
 
+
+
     # Scrape data from worldometer
     '''
     Column can take the following values:
@@ -15,23 +17,23 @@ class Benford:
         NewDeaths
         TotalDeaths
     '''
-    def scrape_worldometer(column):
+    def scrape_worldometer(self, column):
+        
         url = 'https://www.worldometers.info/coronavirus/country/us'
-        cases = []
         r = requests.get(url)
         dfs = pd.read_html(r.text)
+
         for i in range(1,len(dfs[1])-12):
-            # key = dfs[1].get('USAState').get(i)
             value = dfs[1].get(column).get(i)
-            #print(value)
             if 'New' in column:
                 if isinstance(value, str) == True:    
                     value = value.replace('+','')
                     value = value.replace(',','')
-                    cases.append(value)
+                    self.data.append(value)
             else:
-                cases.append(str(value))
-        return cases
+                self.data.append(str(value))
+
+
     
     def count_digits(numbers):
         for i in range(1,10):
