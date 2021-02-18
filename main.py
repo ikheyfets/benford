@@ -1,12 +1,13 @@
 import requests
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 class Benford:
-    def __init__(self):
+    def __init__(self, data = []):
         self.data = []
         self.digits = {}
-
+        self.theory = [np.log(1+1/x)/np.log(10) for x in range(10)]
 
 
     # Scrape data from worldometer
@@ -18,7 +19,7 @@ class Benford:
         TotalDeaths
     '''
     def scrape_worldometer(self, column):
-        
+        self.data = []
         url = 'https://www.worldometers.info/coronavirus/country/us'
         r = requests.get(url)
         dfs = pd.read_html(r.text)
