@@ -16,7 +16,7 @@ import re
 
 
 def extract_digits(data):
-    '''
+    """
     Parameters
     ----------
     data: can be a list, a string or any dataa type
@@ -24,10 +24,10 @@ def extract_digits(data):
     Returns
     -------
     digits: a list of integers contained in data input
-    '''
+    """
     digits = []
     for element in data:
-        if isinstance(element,str) != True:
+        if not isinstance(element, str):
             element = str(element)
         element = re.sub("\D", "", element)
         for i in range(len(element)):
@@ -59,25 +59,15 @@ def count_digits(numbers):
     return digit_count
 
 
-
 def plot_distribution(digits, name: str):
     # Reworking
     theory = [np.log(1+1/x)/np.log(10)*sum(digits.values()) for x in range(1, 10)]
-
     fig = plt.figure()
-
     ax = fig.add_subplot(111)
-    ax.bar(range(len(digits)), list(digits.values()), align='center', label = name)
-    ax.plot(range(len(digits)), theory, color='magenta', label = 'Theoretical Benford Distribution')
+    ax.bar(range(len(digits)), list(digits.values()), align='center', label=name)
+    ax.plot(range(len(digits)), theory, color='magenta', label='Theoretical Benford Distribution')
     ax.set_ylabel(f'Frequency of digits in {name}')
-
     plt.xticks(range(len(digits)), list(digits.keys()))
     ax.set_xlabel('Digits')
-    ax.legend(loc = 0)
+    ax.legend(loc=0)
     plt.show()
-
-x = ['1235743224545dhd', '2345gagf45352', 111111111111111111]
-x = extract_digits(x)
-x = count_digits(x)
-plot_distribution(x, 'test')
-
