@@ -1,6 +1,6 @@
 # Example code 
 
-import main, scraping 
+import benford_plot, scraping
 
-data = main.count_digits(scraping.scrape_worldometer('NewCases'))
-main.plot_distribution(data)
+data = benford_plot.count_digits(scraping.scrape_worldometer('NewCases'))
+benford_plot.plot_distribution(data)
