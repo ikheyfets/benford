@@ -59,7 +59,7 @@ def count_digits(numbers):
     return digit_count
 
 
-def plot_distribution(digits, name: str):
+def plot_distribution(digits, name: str, png=False):
     # Reworking
     theory = [np.log(1+1/x)/np.log(10)*sum(digits.values()) for x in range(1, 10)]
     fig = plt.figure()
@@ -70,4 +70,8 @@ def plot_distribution(digits, name: str):
     plt.xticks(range(len(digits)), list(digits.keys()))
     ax.set_xlabel('Digits')
     ax.legend(loc=0)
-    plt.show()
+    if png == False:
+        plt.show()
+    else:
+        filename = f'{name}.png'
+        plt.savefig(filename)
