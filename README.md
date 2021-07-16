@@ -8,4 +8,4 @@ P{d} = ln(1 + 1/d) / ln(10), where d is each individual digit
 This very simple and straightforward repository provides code to plot data against theoretical Benford's distribution.
 
 I also included examples by checking different data against Benford's distribution. 
-  - FitBit data (Steps, Distance, Calories)
+  - FitBit data (Steps, Distance, Calories), source: https://www.kaggle.com/arashnic/fitbit
