@@ -10,3 +10,7 @@ This very simple and straightforward repository provides code to plot data again
 I also included examples by checking different data against Benford's distribution. See Examples folder for sample graphs.
   - FitBit data (Steps, Distance, Calories), source: https://www.kaggle.com/arashnic/fitbit
   - Covid-19 data (US: confirmed cases, Active cases, Deaths), source: https://www.kaggle.com/imdevskp/corona-virus-report
+
+#### Dependencies 
+  - matplotlib
+  - pandas
