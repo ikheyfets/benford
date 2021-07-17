@@ -4,12 +4,12 @@ Distributions for variables obtained from the FitBit Tracker Data
 
 Variable - Total Steps:
 
-![](TotalSteps.png)
+![](FitBit_graphs/TotalSteps.png)
 
 Variable - Total Distance:
 
-![](TotalDistance.png)
+![](FitBit_graphs/TotalDistance.png)
 
 Variable - Calories:
 
-![](Calories.png)
+![](FitBit_graphs/Calories.png)

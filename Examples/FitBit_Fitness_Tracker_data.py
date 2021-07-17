@@ -16,4 +16,4 @@ v = ['TotalSteps', 'TotalDistance', 'Calories']
 for variable in v:
     data = fitbit_df[variable]
     digits = count_digits(extract_digits(data))
-    plot_distribution(digits, variable, png=True)
+    plot_distribution(digits, variable, png=True, dir='FitBit_graphs')
