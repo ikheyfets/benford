@@ -13,3 +13,17 @@ Variable - Total Distance:
 Variable - Calories:
 
 ![](FitBit_graphs/Calories.png)
+
+Distributions for variables obtained from the COVID Data
+
+Variable - US Active Cases:
+
+![](COVID_graphs/US/Active.png)
+
+Variable - US Confirmed Cases:
+
+![](COVID_graphs/US/Confirmed.png)
+
+Variable - US Deaths:
+
+![](COVID_graphs/US/Deaths.png)
