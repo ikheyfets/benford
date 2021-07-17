@@ -10,6 +10,7 @@
 from benford_plot import *
 import pandas
 
+
 fitbit_df = pandas.read_csv('Datasets/dailyActivity_merged.csv')
 
 v = ['TotalSteps', 'TotalDistance', 'Calories']
